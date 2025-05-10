@@ -33,7 +33,7 @@ export const MainSection = () => {
         </div>
       </div>
       <div className=" absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+        <span className="text-sm text-muted-foreground mb-2">Desliza</span>
         <ArrowDown className="H-5 W-5 text-primary " />
       </div>
     </section>

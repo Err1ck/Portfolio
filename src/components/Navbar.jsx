@@ -5,11 +5,11 @@ import { X } from "lucide-react";
 import { Menu } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "#main" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Inicio", href: "#main" },
+  { name: "Sobre mí", href: "#about" },
+  { name: "Habilidades", href: "#skills" },
+  { name: "Proyectos", href: "#projects" },
+  { name: "Contacto", href: "#contact" },
 ];
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
