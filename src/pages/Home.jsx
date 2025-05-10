@@ -3,6 +3,7 @@ import { StarBackground } from "@/components/StarBackground";
 import { Navbar } from "@/components/Navbar";
 import { MainSection } from "@/components/MainSection";
 import { AboutSection } from "@/components/AboutSection";
+import { SkillsSection } from "@/components/SkillsSeccion";
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
       {/* Main Content */}
       <MainSection />
       <AboutSection />
+      <SkillsSection />
       {/* Footer */}
     </div>
   );
