@@ -9,14 +9,15 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
-import { Description } from "@radix-ui/react-toast";
 import { useState } from "react";
+import emailJS from "@emailjs/browser";
 
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    emailJS.sendForm("service_n05ba9v", "template_1dwin8j", e.target, "CoYc9H6j3buU69f_7");
     setIsSubmitting(true);
     setTimeout(() => {
       toast({
