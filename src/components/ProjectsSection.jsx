@@ -1,25 +1,27 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+
+
 const projects = [
   {
     id: 1,
-    title: "SOON",
-    description: "Descripcion 1",
-    image: "/projects/project1.png",
-    tags: ["SOON", "SOON", "SOON"],
-    demoUrl: "#",
-    gitHubUrl: "#",
+    title: "Pancake Swap",
+    description: "Replica de la web de Pancake Swap como proyecto de Bootcamp",
+    image: "/projects/pancake-swap.png",
+    tags: ["HTML", "CSS", "SCSS", "JavaScript"],
+    demoUrl: "https://pancake-swap-roan.vercel.app/",
+    gitHubUrl: "https://github.com/Develhope-e3/pancake-swap",
   },
-  {
+  /*{
     id: 2,
-    title: "SOON",
-    description: "Descripcion 2",
+    title: "Blog",
+    description: "Pagina web hecha con MERN",
     image: "/projects/project2.png",
-    tags: ["SOON", "SOON", "SOON"],
+    tags: ["MongoDB", "Express", "React", "Next.js"],
     demoUrl: "#",
     gitHubUrl: "#",
-  },
-  {
+  },*/
+  /*{
     id: 3,
     title: "SOON",
     description: "Descripcion 3",
@@ -27,7 +29,7 @@ const projects = [
     tags: ["SOON", "SOON", "SOON"],
     demoUrl: "#",
     gitHubUrl: "#",
-  },
+  },*/
 ];
 export const ProjectsSection = () => {
   return (
@@ -42,7 +44,8 @@ export const ProjectsSection = () => {
           cuidadosamente elaborado con atención al detalle, el rendimiento y la
           experiencia del usuario.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex justify-center gap-6"/**className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" */
+        >
           {projects.map((project, key) => (
             <div
               key={key}

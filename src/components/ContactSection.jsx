@@ -17,13 +17,20 @@ export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailJS.sendForm("service_n05ba9v", "template_1dwin8j", e.target, "CoYc9H6j3buU69f_7");
     setIsSubmitting(true);
+    /*emailJS.sendForm(
+      "service_n05ba9v",
+      "template_1dwin8j",
+      e.target,
+      "CoYc9H6j3buU69f_7"
+    );*/
+
     setTimeout(() => {
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
+      e.target.reset();
       setIsSubmitting(false);
     }, 1500);
   };
@@ -49,7 +56,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div className="">
+                <div className="flex flex-col justify-between items-center w-[72%]">
                   <h4>Correo electrónico</h4>
                   <a
                     href="mailto:erick.a.cabezas.gallart@gmail.com"
@@ -59,11 +66,11 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div className="">
+                <div className="flex flex-col justify-between items-center w-[72%]">
                   <h4>Teléfono</h4>
                   <a
                     href="tel:+34666934846"
@@ -73,11 +80,11 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div className="">
+                <div className="flex flex-col justify-between items-center w-[72%]">
                   <h4>Ubicación</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
                     Tarragona, Cataluña, España
@@ -121,8 +128,8 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="Erick Cabezas..."
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary/80 text-gray-500"
+                  placeholder="Nombre..."
                 ></input>
               </div>
               <div>
@@ -137,7 +144,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary text-gray-500"
                   placeholder="name12AB@gmail.com"
                 ></input>
               </div>
@@ -152,7 +159,7 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary text-gray-500"
                   placeholder="Hola, me gustaría hablar sobre..."
                 />
               </div>
